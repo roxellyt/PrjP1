@@ -8,15 +8,32 @@ import { RoxellycomponentComponent } from './roxellycomponent/roxellycomponent.c
 import { RoxellylistacomponentComponent } from './roxellylistacomponent/roxellylistacomponent.component';
 import { RoxellydetalhescomponentComponent } from './roxellydetalhescomponent/roxellydetalhescomponent.component';
 import { RouterModule } from '@angular/router';
+import { RoxellydisciplinasService } from './roxellydisciplinas.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, RouterModule.forRoot([
-    { path: 'roxellycomponent', component: RoxellycomponentComponent },
-    { path: 'roxellydetalhescomponent', component: RoxellydetalhescomponentComponent },
-    { path: 'roxellylistacomponent', component: RoxellylistacomponentComponent },
-  ]),
-],
-  declarations: [ AppComponent, HelloComponent, RoxellycomponentComponent, RoxellylistacomponentComponent, RoxellydetalhescomponentComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot([
+      { path: 'roxellycomponent', component: RoxellycomponentComponent },
+      {
+        path: 'roxellydetalhescomponent',
+        component: RoxellydetalhescomponentComponent,
+      },
+      {
+        path: 'roxellylistacomponent',
+        component: RoxellylistacomponentComponent,
+      },
+    ]),
+  ],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    RoxellycomponentComponent,
+    RoxellylistacomponentComponent,
+    RoxellydetalhescomponentComponent,
+  ],
+  bootstrap: [AppComponent],
+  providers: [RoxellydisciplinasService],
 })
-export class AppModule { }
+export class AppModule {}

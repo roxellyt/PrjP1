@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-roxellylistacomponent',
   templateUrl: './roxellylistacomponent.component.html',
-  styleUrls: ['./roxellylistacomponent.component.css']
+  styleUrls: ['./roxellylistacomponent.component.css'],
 })
 export class RoxellylistacomponentComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
