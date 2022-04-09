@@ -1,12 +1,11 @@
-<input type="text" />Incluir Disciplina
-
-<table>
-  <tr>
-    <th>Selecione</th>
-
-    <th>Opções</th>
-  </tr>
-</table>
+<input type="text" [(ngModel)]="tarefa" />
+<button (click)="addTarefa()">Incluir</button>
+<ul>
+  <li *ngFor="let item of items">
+    {{ item }}
+    <button (click)="remover(item)">Remover</button>
+  </li>
+</ul>
 
 <table>
   <tr>
